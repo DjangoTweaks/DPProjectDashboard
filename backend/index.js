@@ -42,7 +42,6 @@ app.get('/getVals', (req,res)=>
 
 
 
-
 // Data storage variable
 let postData = null;
 
@@ -82,12 +81,14 @@ app.post('/send-data-ESP32', (req,res) =>
     tempData = req.body; 
 
     console.log(tempData);
-   1 
+    
 
     res.send({
         msg: "Data Sent Successfully"
     });
+
 });
+
 
 
 app.get('/get-data-ESP32', (req,res)=>
@@ -102,10 +103,6 @@ app.get('/get-data-ESP32', (req,res)=>
         res.send(null);
     }
 });
-
-
-
-
 
 
 
